@@ -1,4 +1,4 @@
-#About
+# About
 As the name says, this is an application for programming AVR chips with HVSP protocol using a CH341.
 
 This library is based on the module contained in CH341PAR_LINUX.ZIP published by WCH:
@@ -7,8 +7,8 @@ http://www.wch.cn/download/CH341PAR_LINUX_ZIP.html
 
 The application has been tested with a YSUMA01-341A module, and I think it must work with any EPP/I2C/SPI module based on the CH341 chip (and maybe any CH34X)
 
-#Todo
-##Hardware
+# Todo
+## Hardware
 In the folder [Hardware](hardware/ "hardware") you can find an schematic and a Kicad project.
 
 The project is based on a board with access to all the GPIO ([Models](https://github.com/stahir/CH341-Store "https://github.com/stahir/CH341-Store")) and a MT3608 voltage booster for getting the required 12V in the AVR reset pin.
@@ -30,7 +30,7 @@ The GPIO assignment is as follows, but you can change it (don't forget to change
 |D5|Vcc control|
 |--- |--- |
 
-##Software
+## Software
 
 For linking the project need to link libusb-1.0.
 
@@ -47,15 +47,12 @@ If you need to change the pin assignments in hardware, you also need to change t
 #define  VCC     D5     // Connect to !VCC through pnp transistor
 ```
 
-Usage
-=====
+# Usage
 The syntax is similar to _avrdude_:
 * _-e_: erases the chip.
 * _-U_: memory operation with the same syntax as _avrdude_
 
 Only intel hex format is allowed by now.
 
-License
-=======
-
+# License
 This application is under GPL v3, and greater, license. A copy of it is included.
